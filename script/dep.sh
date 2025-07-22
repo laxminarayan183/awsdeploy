@@ -1,5 +1,6 @@
 #!/bin/bash
-ec2-user
 sudo yum update -y
-sudo yum install apache2 -y
-rm /var/www/html/index.html
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+/var/www/html/index.html
